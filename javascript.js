@@ -1,4 +1,5 @@
-
+playerScore = 0;
+computerScore = 0;
 function getComputerChoice () {
     randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
@@ -16,7 +17,7 @@ function getComputerChoice () {
 
 
 function playRound (playerSelection, computerSelection) {
-playerSelection.toLowerCase = playerSelection.toUpperCase;
+
 switch (randomNumber) {
      case 0:
         console.log ("It's a draw");
@@ -29,6 +30,30 @@ switch (randomNumber) {
         break;
 }
 }
-const playerSelection = "ROCK";
+
+
+let playerSelectionCase = prompt ("Choose rock, paper or scissors");
+playerSelection = playerSelectionCase.toLowerCase();
+
+
+function turnToNumber () {
+let number
+if (playerSelection == "rock") {
+    number = 0 }
+    else if (playerSelection == "paper") {
+        number = 1; 
+    }
+
+     else if (playerSelection == "scissors")
+     {number = 2};
+
+ return number;
+}
+console.log (turnToNumber());
+
 const computerSelection = getComputerChoice ();
-console.log (playRound(playerSelection, computerSelection));
+
+
+
+
+
